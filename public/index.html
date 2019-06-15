@@ -13,19 +13,22 @@
 <body>
     <nav class="log ">
         <div>
-            <form action="">
+            <form id="form_login" method="post" onsubmit="return entrar()" >
                 Nome de Usuario
                 <Input type="text" id="nome"></Input>
                 Senha
                 <Input type="text" id="Senha"></Input>
                 <button type="button" onclick="log()" class="myButton">Login</button>
             </form>
+            <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
+                Usuário e/ou senha inválidos!
+            </div>
         </div>
     </nav>
 
     <div class="cad">
 
-        <form method="get">
+        <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
 
             <Input type="text" id="nomecad" placeholder="Nome" class="campocl">
 
@@ -34,23 +37,14 @@
             <Input type="text" id="cpf" placeholder="CPF" onkeypress="mascara(this, '###-###-###-##')" class="campocl">
             <Input type="text" id="rg" placeholder="RG" class="campocl"></Input>
             <br>
-            <select name="" id="conven" class="campoc2">
-                <option value="" disabled selected>-Convenios-</option>
-                <option value="1">Unimde</option>
-                <option value="2">Amil</option>
-                <option value="3">Bradesco</option>
-                <option value="4">-Maritima-</option>
-                <option value="5">-Metropolitsno-</option>
-                <option value="6">-Amico-</option>
-            </select><br>
             <Input type="text" id="email" placeholder="Email" class="campocl">
             <Input type="text" id="confe" placeholder="Corfirma e-mail" class="campocl">
             <br>
             <Input type="text" id="senhacad" placeholder="Senha" class="campocl">
             <Input type="text" id="confcadsenha" placeholder="Corfirma Senha" class="campocl">
             <br>
-            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" class="campoc3" onblur="pesquisacep(this.value);"
-                placeholder="  CEP">
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" class="campoc3"
+                onblur="pesquisacep(this.value);" placeholder="  CEP">
             <input name="uf" type="text" id="uf" size="2" class="campoc3-uf" placeholder="  UF"><br>
             <button type="button" onclick="verifica()" class="myButton">Cadasrar</button>
 
