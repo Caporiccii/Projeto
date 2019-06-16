@@ -58,15 +58,10 @@ function cadastrar() {
 
             console.log('Erro de cadastro!');
             response.text().then(function (resposta) {
-                Swal.fire({
-                    type: 'error',
-                    title: 'Erro Login',
-                    text: resposta,
-                    footer: 'Verifique seu login e tente novamente.'
+                div_erro.innerHTML = resposta; 
                 });
 
-            });
-            finalizar_aguardar();
+                  finalizar_aguardar();
         }
     });
 
@@ -105,9 +100,7 @@ function verifica() {
     else if (rg.value == 0) {
         alert('Insira RG para Cadastro')
     }
-    else if (conven.value == '') {
-        alert('Insira Convênio para Cadastro')
-    }
+   
     else if (email.value == '') {
         alert('Insira E-mail para Cadastro')
     }
@@ -132,5 +125,13 @@ function verifica() {
     }
     else if(rg.value ==''){
         alert('RG em Branco')
+    }
+}
+function mascara(t, mask) {
+    var i = t.value.length;
+    var saida = mask.substring(1, 0);
+    var texto = mask.substring(i)
+    if (texto.substring(0, 1) != saida) {
+        t.value += texto.substring(0, 1);
     }
 }

@@ -13,7 +13,7 @@
 <body>
     <nav class="log ">
         <div>
-            <form id="form_login" method="post" onsubmit="return entrar()" >
+            <form id="form_login" method="post" onsubmit="return entrar()">
                 Nome de Usuario
                 <Input type="text" id="nome"></Input>
                 Senha
@@ -43,10 +43,9 @@
             <Input type="text" id="senhacad" placeholder="Senha" class="campocl">
             <Input type="text" id="confcadsenha" placeholder="Corfirma Senha" class="campocl">
             <br>
-            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" class="campoc3"
-                onblur="pesquisacep(this.value);" placeholder="  CEP">
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" class="campoc3" placeholder="  CEP">
             <input name="uf" type="text" id="uf" size="2" class="campoc3-uf" placeholder="  UF"><br>
-            <button type="button" onclick="verifica()" class="myButton">Cadasrar</button>
+            <button type="button" onclick="verifica()" class="myButton" name="btn_entrar" id="btn_entrar">Cadastrar</button>
 
         </form>
 
